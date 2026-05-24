@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>消費税込み金額計算アプリ</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="app" id="app">
+    <div class="title-area">
+      <div class="icon">🛒</div>
+      <h1>税込み金額計算</h1>
+      <p>8%・10%の税込み金額をかんたん計算</p>
+    </div>
+
+    <div class="form-area">
+      <label for="price">本体価格</label>
+      <input type="number" id="price" placeholder="例：1000">
+
+      <div class="checkbox-area">
+        <label>
+          <input type="checkbox" id="saleDay">
+          <span>特売日の場合（5%オフ）</span>
+        </label>
+      </div>
+
+      <button id="calculateButton">計算する</button>
+    </div>
+
+    <div class="result" id="result">
+      ここに計算結果が表示されます
+    </div>
+  </div>
+
+</body>
+</html>
