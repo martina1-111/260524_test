@@ -1,0 +1,192 @@
+body {
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff1f7, #fff8e7);
+  color: #5a3d3d;
+}
+
+.app {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(255, 154, 180, 0.25);
+  border: 3px solid #ffd6e5;
+}
+
+.title-area {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.icon {
+  font-size: 42px;
+  margin-bottom: 8px;
+  animation: swingCart 2.4s ease-in-out infinite;
+}
+
+h1 {
+  font-size: 26px;
+  margin: 0;
+  color: #e85d8f;
+}
+
+.title-area p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #9b7777;
+}
+
+.form-area label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  box-sizing: border-box;
+  margin-bottom: 18px;
+  border: 2px solid #ffd1df;
+  border-radius: 14px;
+  outline: none;
+  background: #fffafd;
+}
+
+input[type="number"]:focus {
+  border-color: #ff8fb3;
+  box-shadow: 0 0 0 4px rgba(255, 143, 179, 0.18);
+}
+
+.checkbox-area {
+  background: #fff5fa;
+  padding: 14px;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  border: 2px dashed #ffc4d8;
+}
+
+.checkbox-area label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkbox-area input {
+  width: 18px;
+  height: 18px;
+  accent-color: #ff7aa8;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff8fb3, #ffb86c);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(255, 143, 179, 0.35);
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 18px rgba(255, 143, 179, 0.45);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.result {
+  margin-top: 22px;
+  padding: 18px;
+  background: #fff8fb;
+  border-radius: 18px;
+  font-size: 17px;
+  line-height: 1.9;
+  border: 2px solid #ffd6e5;
+}
+
+.result.show {
+  animation: popResult 0.45s ease;
+}
+
+.result-title {
+  font-weight: bold;
+  color: #e85d8f;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.result strong {
+  color: #d94c7c;
+}
+
+.sale-label {
+  display: inline-block;
+  background: #ffedf4;
+  color: #e85d8f;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.particle {
+  position: absolute;
+  left: 50%;
+  top: 64%;
+  font-size: 22px;
+  pointer-events: none;
+  animation: floatUp 1.1s ease-out forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(0.8) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--x)), -120px) scale(1.4) rotate(var(--rotate));
+  }
+}
+
+@keyframes popResult {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.3;
+  }
+
+  60% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes swingCart {
+  0%, 100% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+}
